@@ -79,14 +79,6 @@ public class AdminAction {
 	@RequestMapping(value="/admin/adminProductList")
 	public String toadminProductList(HttpServletRequest request,HttpServletResponse response,
 			HttpSession session){
-		/*
-		 * 要想实现分页的功能，就必须获得这五项数据:这五项数据将被封装进pagebaen对象中，在各层间传递 
-		 * 当前页 currentPage 该数据从客户端获得 //1表示第一页 
-		 * 每页显示的条数 currentCount 该数据也从客户端获得 目前我们在这写死 12条 
-		 * 数据总条数totalCount 
-		 * 总页数 totalPage 
-		 * 当前页上的数据 pageData
-		 */
 
 		// 获得表单的数据currentPage
 		String currentPage = request.getParameter("currentPage");
@@ -119,14 +111,14 @@ public class AdminAction {
 		return "addproduct";
 	}
 	
-	//添加商品分类
+	//添加商品
 	@RequestMapping(value="/admin/adminAddProduct")
 	public String adminAddProduct(@RequestParam("file")MultipartFile file,Product product,HttpServletRequest request) throws IllegalStateException, IOException{
 		product.setPid(UUID.randomUUID().toString());
 		//product.setPimage("products/1/c_0014.jpg");
 		// 上传文件
 		String path = request.getSession().getServletContext().getRealPath("/images/products/1");
-		System.out.println(path);
+		//System.out.println(path);
 		String fileName = file.getOriginalFilename();
 		File dir = new File(path, fileName);
 		if (!dir.exists()) {

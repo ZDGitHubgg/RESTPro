@@ -58,7 +58,6 @@
 
 </head>
 <body bgcolor="antiquewhite">
-	<form action="${pageContext.request.contextPath }/admin/deleteCategory" method="post">
 	<table width="50%" align="center" cellpadding="0px" cellspacing="0px"
 		border="1px">
 		<caption>商品分类列表</caption>
@@ -66,7 +65,7 @@
 		<tr>
 			<td colspan="3" align="right"><button onclick="addProduct()">添加分类</button></td>
 		</tr>
-		
+		<form action="${pageContext.request.contextPath }/admin/deleteCategory" method="post">
 		<tr>
 			<td align="center">序号</td>
 			<td align="center">分类</td>

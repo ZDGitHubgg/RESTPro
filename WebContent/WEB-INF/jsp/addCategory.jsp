@@ -12,7 +12,7 @@
 </script>
 </head>
 <body bgcolor="antiquewhite">
-	<form action="${pageContext.request.contextPath }/admin/daleteCategory" method="post">
+	<form action="${pageContext.request.contextPath }/admin/addCategory" method="post">
 		<table width="35%" align="center" cellpadding="0px" cellspacing="0px" border="1px">
 			<caption>添加分类</caption>
 			<tr>
